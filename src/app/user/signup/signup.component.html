@@ -1,0 +1,27 @@
+<div [formGroup]="signupForm"> 
+    
+    <div style="border:2px solid;width:70%;height:350px;text-align:center;margin:5%;color:black;background-color:white">
+           <h1 style="color:red"><u>SignUp Form</u></h1>
+           <br><br>
+         Name: &nbsp;<input type="text" formControlName="name" required><br>
+        <div>&nbsp; &nbsp;</div>
+        Mobile: &nbsp;<input type="number" formControlName="mobile" required><br>
+        <div>&nbsp; &nbsp;</div>
+        OTP : &nbsp;<input type="otp" formControlName="otp" required><br>
+        <div>&nbsp; &nbsp;</div>
+        Password : &nbsp;<input type="password" formControlName="pwd" required><br>
+        <div>&nbsp; &nbsp;</div>
+          <a routerLink="setpassword"> <button style="background-color:green;border:1px;height:30px;width:100px" (click)="def()" >SignUp</button></a>
+            &nbsp; &nbsp;<a><button style="background-color: red;border:1px;height:30px;width:100px">Cancel</button></a><br>
+            
+            <a  style="color:black" ><h4><u>Resend OTP..</u></h4></a>
+            
+        </div>
+</div>
+<table *ngIf="data">
+    <tr *ngFor="let a of data">
+        <td>{{a.name}}</td>
+        <td>{{a.mobile}}</td>
+        <td>{{a.otp}}</td>
+    </tr>
+</table>

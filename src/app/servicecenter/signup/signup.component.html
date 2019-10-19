@@ -1,0 +1,39 @@
+<div [formGroup]="signupForm"> 
+    
+    <div style="border:2px solid;width:70%;height:550px;text-align:center;margin:5%;color:black;background-color:white">
+           <h1 style="color:red"><u>Servicecenter SignUp Form</u></h1>
+           <br><br>
+        First Name: &nbsp;<input type="text" formControlName="name" required><br>
+        <div>&nbsp; &nbsp;</div>
+        Owner Name: &nbsp;<input type="text" formControlName="owner" required><br>
+        <div>&nbsp; &nbsp;</div>
+        Contact: &nbsp;<input type="number" formControlName="mobile" required><br>
+        <div>&nbsp; &nbsp;</div>
+        Email: &nbsp;<input type="email" formControlName="mail" required><br>
+        <div>&nbsp; &nbsp;</div>
+        Password : &nbsp;<input type="password" formControlName="pwd" required><br>
+        <div>&nbsp; &nbsp;</div>
+        Confirm Password : &nbsp;<input type="password" formControlName="confirm" required><br>
+        <div>&nbsp; &nbsp;</div>
+        Pincode : &nbsp;<input type="password" formControlName="pin" required><br>
+        <div>&nbsp; &nbsp;</div>
+        Address : <textarea></textarea><br>
+           <br> <br>
+          <a routerLink="contact"> <button style="background-color:green;border:1px;height:30px;width:100px" (click)="def()" >Submit</button></a>
+            &nbsp; &nbsp;<a><button style="background-color: red;border:1px;height:30px;width:100px">Cancel</button></a><br>
+            
+            
+        </div>
+</div>
+<table *ngIf="data">
+    <tr *ngFor="let a of data">
+        <td>{{a.name}}</td>
+        <td>{{a.mobile}}</td>
+        <td>{{a.owner}}</td>
+        <td>{{a.mail}}</td>
+        <td>{{a.pwd}}</td>
+        <td>{{a.confirm}}</td>
+        <td>{{a.pin}}</td>
+    </tr>
+</table>
+

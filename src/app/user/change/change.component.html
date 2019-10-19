@@ -1,0 +1,27 @@
+<div [formGroup]="setForm"> 
+    
+    <div style="border:2px solid;width:70%;height:350px;text-align:center;margin:5%;color:black;background-color:white">
+           <h1 style="color:red"><u>Change Password</u></h1>
+           <br><br>
+          Current Password: &nbsp;<input type="password" formControlName="enter" required><br>
+        <div>&nbsp; &nbsp;</div>
+        New password: &nbsp;<input type="password" formControlName="pwd" required><br>
+        <div>&nbsp; &nbsp;</div>
+        Confirm Password : &nbsp;<input type="password" formControlName="confirm" required><br>
+        <div>&nbsp; &nbsp;</div>
+       
+          <a routerLink="login"> <button style="background-color:green;border:1px;height:30px;width:100px" (click)="hij()" >submit</button></a>
+            &nbsp; &nbsp;<a><button style="background-color: red;border:1px;height:30px;width:100px">Cancel</button></a><br>
+            
+            
+        </div>
+</div>
+<table *ngIf="data">
+    <tr *ngFor="let a of data">
+        <td>{{a.enter}}</td>
+        <td>{{a.pwd}}</td>
+        <td>{{a.confirm}}</td>
+        
+    </tr>
+</table>
+

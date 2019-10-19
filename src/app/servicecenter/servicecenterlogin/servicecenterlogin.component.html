@@ -1,0 +1,25 @@
+<div [formGroup]="userloginForm"> 
+    
+    <div style="border:2px solid;width:70%;height:350px;text-align:center;margin:5%;color:black;background-color:white">
+           <h1 style="color:red"><u>Servicecenter Login Form</u></h1>
+           <br><br>
+        Contact: &nbsp;<input type="number" formControlName="username" required><br>
+        <div>&nbsp; &nbsp;</div>
+                Password : &nbsp;<input type="password" formControlName="pwd" required><br>
+        <div>&nbsp; &nbsp;</div>
+        <input type="checkbox" formControlName="tick">Remember me<br>
+        <br>
+          <a routerLink="dashboard"> <button style="background-color:green;border:1px;height:30px;width:100px" (click)="abc()" >Login</button></a>
+            &nbsp; &nbsp;<a><button style="background-color: red;border:1px;height:30px;width:100px">Cancel</button></a><br>
+            
+            <a routerLink="forget" style="color:black" ><h4><u>Forget Password..</u></h4></a>
+           <h4>Are u New ? <a routerLink="signup"  ><u> SignUp</u></a></h4>
+        </div>
+</div>
+<table *ngIf="data">
+    <tr *ngFor="let a of data">
+        <td>{{a.username}}</td>
+        <td>{{a.pwd}}</td>
+        
+    </tr>
+</table>

@@ -1,0 +1,68 @@
+<div style="border:1px solid greenyellow;color:chartreuse(51, 3, 3);text-align:center;width:70%;height:750px;margin:30px;">
+    <h1 style="color:brown"><u>Booking For CAR Wash/Maintainence</u></h1>
+    <br>
+    <form [formGroup]="bookingForm">
+        <span><b>Vehical Name :</b><select formcontrolname="vehicalname" required>
+          <option >Audi</option>
+          <option>Bently</option>
+          <option>BMW</option>
+          <option>Jaguar</option>
+          <option>Mercedes Benz</option>
+          <option>Volvo</option>
+          </select></span><br>
+          <br>
+        <span><b>Vehical Type : </b>
+         
+          <select formcontrolname="vehicaltype"  required>
+           <option>Hatch Back</option>
+            <option>SUV</option>
+            <option>Sedan</option>
+              </select></span><br>
+              <br>
+              <span><b>Contact Name : </b></span><input text="type"  formcontrolname="contactname"  required><br>
+              <br>
+              <span><b>Contact Number : </b></span><input text="type"  formcontrolname="contactnumber" required><br>
+              <br>
+              <span><b>Service Type : </b></span><input text="type" formcontrolname="servicetype"  required><br>
+              <br>
+              <span><b>Requirements: </b></span><input text="type" formcontrolname="requirements"  required><br>
+              <br>
+             <div>
+               <label>
+                 <b>Is Pick Up?</b></label>
+                    <span>
+                    Yes <input type="radio" name="yes_no" checked  formControlname="pickupyes"  >
+                    </span>
+                    <span>
+                    No <input type="radio" name="yes_no" formControlname="pickupno"  >
+                    </span>
+                </div><br>
+              <span><b>Area Location: </b></span><input text="type" formControlname="arealocation"  required><br>
+              <br>
+              <span><b>Pickup Date: </b></span><input text="type" formControlname="pickupdate" required><br>
+              <br>
+              <span><b>Pickup Location : </b></span><input text="type" formControlname="picklocation"  required><br>
+              <br>
+              <span><b>Budget Price: </b></span><input text="type" formControlname="budgetprice"  required><br>
+              <br>
+              <a routerLink="/dashboard" (click)="abc()" ><button style="border:1px solid;margin:10px;background-color:green;">Submit</button></a>
+              <a ><button style="border:1px solid;margin:10px;background-color:red;">Cancel</button></a>
+               </form>
+           
+               </div>
+               <table *ngIf="data">
+               <tr *ngFor="let a of data">
+                   <td>{{a.vehiclename}}</td>
+                   <td>{{a.vehicletype}}</td>
+                   <td>{{a.contactname}}</td>
+                   <td>{{a.contactnumber}}</td>
+                   <td>{{a.servicetype}}</td>
+                   <td>{{a.requirement}}</td>
+                   <td>{{a.pickupyes}}</td>
+                   <td>{{a.arealocation}}</td>
+                   <td>{{a.pickupdate}}</td>
+                   <td>{{a.pickuplocation}}</td>
+                   <td>{{a.budgetprice}}</td>
+                   <td>{{a.id.$oid}}</td>
+               </tr>
+               </table>

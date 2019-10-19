@@ -1,0 +1,25 @@
+#d1{
+    border: 2px solid;
+    width:40%;
+    height:130px;
+    margin:40px;
+    background-color:rgb(66, 155, 25);
+    text-align: center;
+    color:whitesmoke
+}
+#d2{
+    border: 2px solid;
+    width:85%;
+    height:750px;
+    margin:15px;
+    background-color:gray
+}
+#d3{
+    border: 2px solid;
+    width:90%;
+    height:130px;
+    margin:25px;
+    background-color:rgb(33, 128, 33);
+    text-align: center;
+    color: whitesmoke
+}
